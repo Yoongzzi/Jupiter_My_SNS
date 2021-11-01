@@ -5,7 +5,7 @@
  <mapper namespace="com.jupiter.user.dao.UserDAO">
 	<select id="existLoginId" parameterType="string" resultType="int">
 		SELECT 
-			COUNT(1) 
+			count(1) 
 		FROM
 			`user`
 		WHERE 

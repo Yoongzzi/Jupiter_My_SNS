@@ -6,7 +6,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Jupiter</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<hr>
 	<!-- bootstrap CDN link -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- 순서 우선 적용 -->
@@ -25,6 +27,14 @@
 		<section>
 			<jsp:include page="../${viewName}.jsp" />
 		</section>
+		<footer>
+			<div class="footer d-flex align-items-center justify-content-center mt-5">
+				<span>Copyright © jupiter 2021</span>
+			</div>
+			
+		</footer>
 	</div>
+	
+	
 </body>
 </html>

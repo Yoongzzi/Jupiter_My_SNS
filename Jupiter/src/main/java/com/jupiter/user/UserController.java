@@ -1,5 +1,8 @@
 package com.jupiter.user;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,5 +23,30 @@ public class UserController {
 		return "template/layout";	
 	}
 	
-
+	/**
+	 * 로그인 화면
+	 * @param model
+	 * @return
+	 */
+	
+	@RequestMapping("/login_view") 
+	public String signInView(Model model) {
+		model.addAttribute("viewName", "user/sign_in");
+		return "template/layout";
+	}
+	
+	/**
+	 * 로그아웃
+	 * @param request
+	 * @return
+	 */
+	
+	@RequestMapping("/sign_out")
+	public String signOut(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.removeAttribute("userId");
+		session.removeAttribute("userName");
+		session.removeAttribute("userLoginId");
+		return "redirect:/user/login_view";
+	}
 }

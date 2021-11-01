@@ -1,1 +1,12 @@
 @charset "UTF-8";
+
+.header {height:100px;}
+
+
+#signUpPlace {width:300px;}
+.emailCheckBox {width: 20px; height:20px;}
+
+.signInPlace {width:500px; margin: auto;}
+
+
+.footer {height:100px;}
